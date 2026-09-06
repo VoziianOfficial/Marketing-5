@@ -1,0 +1,12 @@
+google: https://www.gstatic.com/images/branding/googleg/1x/googleg_standard_color_128dp.png
+ads: https://www.gstatic.com/images/branding/product/2x/ads_96dp.png
+docs: https://www.gstatic.com/images/branding/product/2x/docs_96dp.png
+sheets: https://www.gstatic.com/images/branding/product/2x/sheets_96dp.png
+slides: https://www.gstatic.com/images/branding/product/2x/slides_96dp.png
+drive: https://www.gstatic.com/images/branding/product/2x/drive_96dp.png
+gmail: https://www.gstatic.com/images/branding/product/2x/gmail_96dp.png
+analytics: https://www.gstatic.com/images/branding/product/2x/analytics_96dp.png
+youtube: https://www.gstatic.com/images/branding/product/2x/youtube_96dp.png
+forms: https://www.gstatic.com/images/branding/product/2x/forms_96dp.png
+meet: https://www.gstatic.com/images/branding/product/2x/meet_96dp.png
+calendar: https://www.gstatic.com/images/branding/product/2x/calendar_96dp.png
