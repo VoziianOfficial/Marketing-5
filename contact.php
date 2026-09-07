@@ -1,5 +1,5 @@
 <?php
-// Copy this file beside index.html on a PHP-enabled host.
+
 declare(strict_types=1);
 ini_set('display_errors', '0');
 header('Content-Type: application/json; charset=utf-8');
@@ -19,7 +19,7 @@ $email = trim($_POST['email'] ?? '');
 $message = trim($_POST['message'] ?? '');
 $service = trim($_POST['service'] ?? '');
 if (strlen($name) < 2 || strlen($name) > 120 || !filter_var($email, FILTER_VALIDATE_EMAIL) || preg_match('/[\r\n]/', $email) || strlen($message) < 10 || strlen($message) > 8000 || ($_POST['privacy_consent'] ?? '') !== '1' || !in_array($service, ['Google Ads', 'Remarketing', 'Not sure yet'], true)) reply(422, ['success' => false, 'error' => 'Please check the fields and your privacy consent.']);
-// This accepts a strictly JSON object in a fixed JS assignment, never executes JS.
+
 $source = @file_get_contents(__DIR__ . '/config/config.js');
 if (!$source || !preg_match('/\A\s*window\.SiteConfig\s*=\s*(\{.*\})\s*;?\s*\z/s', $source, $matches)) reply(503, ['success' => false, 'error' => 'Contact settings are unavailable.']);
 $config = json_decode($matches[1], true);

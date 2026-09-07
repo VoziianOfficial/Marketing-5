@@ -1,4 +1,4 @@
-/* Homepage only. Artwork and cloud motion use separate layers. */
+
 .cloud-scene {
     position: relative;
     isolation: isolate;
@@ -420,7 +420,7 @@
     }
 }
 
-/* Keep the original artwork cleanly framed while the cloud platform overlaps it. */
+
 .cloud-hero .hero-visual {
     background: #fff;
     border-radius: 46% 44% 38% 42%;

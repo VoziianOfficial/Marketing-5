@@ -1448,7 +1448,7 @@ footer {
     }
 }
 
-/* Expanded art direction: closer spacing, layered product imagery, distinct motion. */
+
 :root {
     --header: 76px
 }
@@ -3836,7 +3836,7 @@ h2 {
     }
 }
 
-/* Studio edition: richer surfaces and hands-on exploration. */
+
 :root {
     --header: 74px
 }
@@ -6327,6 +6327,8 @@ header {
     .goal-output>img {
         height: 135px;
         width: 75%;
+        margin-left: auto;
+        margin-right: auto;
         margin-bottom: -7px
     }
 
@@ -6404,9 +6406,7 @@ header {
     }
 
     .tool-detail {
-        padding: 19px;
-        gap: 13px;
-        align-items: flex-start
+        display: none
     }
 
     .tool-detail-icon {
@@ -6425,7 +6425,9 @@ header {
     }
 
     .tool-detail p {
-        font-size: 13px
+        font-size: 13px;
+        margin-left: auto;
+        margin-right: auto
     }
 
     .rhythm-intro {
@@ -7503,6 +7505,10 @@ header {
 }
 
 @media(max-width:700px) {
+    .section.creative-desk {
+        display: none
+    }
+
     .creative-desk .desk-copy {
         max-width: none
     }
@@ -7527,7 +7533,7 @@ header {
     }
 }
 
-/* Soft depth for core card grids. */
+
 .service-grid .service-card,
 .creative-track .creative-tile,
 .pricing-grid .pricing-card,
