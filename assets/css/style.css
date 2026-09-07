@@ -1677,22 +1677,26 @@ h2 {
 .menu-inner {
     max-width: 1480px;
     position: relative;
-    display: block;
-    padding: 40px 5%;
+    display: grid;
+    grid-template-columns: minmax(520px, 1fr) minmax(430px, 604px);
+    column-gap: clamp(70px, 11vw, 195px);
+    align-items: start;
+    padding: 45px 5.1% 80px;
     height: 100%;
-    min-height: 570px
+    min-height: 670px
 }
 
 .menu-inner>a {
     display: inline-flex;
     align-items: center;
-    gap: 14px;
-    width: min(53%, 560px);
-    min-height: 58px;
-    padding: 10px 14px 10px 12px;
+    grid-column: 1;
+    gap: 27px;
+    width: min(100%, 805px);
+    min-height: 62px;
+    padding: 8px 0;
     border: 1px solid transparent;
     border-radius: 8px;
-    font-size: clamp(24px, 2.55vw, 38px);
+    font-size: clamp(34px, 2.55vw, 43px);
     line-height: 1.2;
     letter-spacing: 0;
     background: transparent;
@@ -1708,50 +1712,55 @@ h2 {
 }
 
 .menu-link-icon {
-    width: 28px;
-    height: 28px;
-    flex: 0 0 28px;
+    width: 36px;
+    height: 36px;
+    flex: 0 0 36px;
     object-fit: contain
 }
 
 .menu-services {
-    width: 50%;
-    padding-top: 20px;
-    margin-top: 20px;
+    grid-column: 1;
+    width: min(100%, 800px);
+    padding-top: 27px;
+    margin-top: 24px;
     border-top: 1px solid #cfdef2
 }
 
 .menu-services a {
-    font-size: 15px
+    font-size: 23px
 }
 
 .menu-feature {
-    position: absolute;
-    right: 5%;
-    top: 40px;
-    width: 34%;
-    padding: 28px;
+    position: static;
+    grid-column: 2;
+    grid-row: 1 / span 8;
+    width: 100%;
+    min-height: 624px;
+    padding: 39px 40px 45px;
     background: #fff;
-    border-radius: 20px;
+    border: 1px solid #d8e6f7;
+    border-radius: 28px;
+    box-shadow: 0 24px 55px #1d437b12;
     overflow: hidden
 }
 
 .menu-product-line {
     display: flex;
-    gap: 18px;
-    margin-bottom: 25px
+    align-items: center;
+    gap: 19px;
+    margin-bottom: 39px
 }
 
 .menu-product-line .product-icon {
-    width: 30px;
-    height: 30px
+    width: 36px;
+    height: 36px
 }
 
 .menu-feature p {
-    font: 600 clamp(23px, 2.8vw, 40px)/1.15 Manrope;
+    font: 600 clamp(36px, 3.1vw, 50px)/1.13 Manrope;
     color: var(--ink);
-    letter-spacing: -.04em;
-    margin-bottom: 8px
+    letter-spacing: 0;
+    margin-bottom: 26px
 }
 
 .menu-feature p em {
@@ -1759,7 +1768,7 @@ h2 {
 }
 
 .menu-feature>img {
-    max-height: 210px;
+    max-height: 260px;
     object-fit: contain;
     width: 100%
 }
@@ -1767,8 +1776,8 @@ h2 {
 .menu-email {
     display: block;
     color: var(--blue);
-    font-size: 15px;
-    margin-top: 10px
+    font-size: 23px;
+    margin-top: 27px
 }
 
 .menu-open nav {
@@ -3984,40 +3993,72 @@ header {
 }
 
 .menu-inner {
-    padding-top: 26px
+    display: grid;
+    grid-template-columns: minmax(520px, 1fr) minmax(430px, 604px);
+    column-gap: clamp(70px, 11vw, 195px);
+    align-items: start;
+    padding: 45px 5.1% 80px;
+    min-height: 670px
 }
 
 .menu-inner>a {
-    font-size: clamp(23px, 2.4vw, 34px);
-    min-height: 54px;
-    padding: 9px 13px 9px 11px
+    grid-column: 1;
+    gap: 27px;
+    width: min(100%, 805px);
+    min-height: 62px;
+    padding: 8px 0;
+    font-size: clamp(34px, 2.55vw, 43px)
 }
 
 .menu-feature {
-    top: 26px;
-    padding: 27px;
+    position: static;
+    grid-column: 2;
+    grid-row: 1 / span 8;
+    width: 100%;
+    min-height: 624px;
+    padding: 39px 40px 45px;
     background: #fff;
     border: 1px solid #dce8f8;
-    box-shadow: 0 15px 40px #1d437b0b
+    border-radius: 28px;
+    box-shadow: 0 24px 55px #1d437b12
 }
 
 .menu-feature>img {
-    max-height: 190px
+    max-height: 260px
 }
 
 .menu-product-line {
-    gap: 12px;
+    align-items: center;
+    gap: 19px;
+    margin-bottom: 39px;
     flex-wrap: wrap
 }
 
 .menu-product-line .product-icon {
-    width: 27px;
-    height: 27px
+    width: 36px;
+    height: 36px
 }
 
 .menu-services {
-    padding-top: 16px;
-    margin-top: 16px
+    grid-column: 1;
+    width: min(100%, 800px);
+    padding-top: 27px;
+    margin-top: 24px
+}
+
+.menu-services a {
+    font-size: 23px
+}
+
+.menu-feature p {
+    font-size: clamp(36px, 3.1vw, 50px);
+    letter-spacing: 0;
+    margin-bottom: 26px
+}
+
+.menu-email {
+    font-size: 23px;
+    margin-top: 27px
 }
 
 .hero {
@@ -5782,8 +5823,63 @@ header {
         min-height: 470px
     }
 
+    .menu-inner {
+        grid-template-columns: minmax(300px, 1fr) minmax(260px, 40%);
+        column-gap: 28px;
+        padding-top: 34px;
+        min-height: 560px
+    }
+
     .menu-inner>a {
-        font-size: 29px
+        gap: 20px;
+        min-height: 54px;
+        font-size: clamp(28px, 3.6vw, 35px)
+    }
+
+    .menu-link-icon {
+        width: 31px;
+        height: 31px;
+        flex-basis: 31px
+    }
+
+    .menu-services {
+        width: 100%;
+        padding-top: 22px;
+        margin-top: 20px
+    }
+
+    .menu-services a {
+        font-size: 18px
+    }
+
+    .menu-feature {
+        min-height: 520px;
+        padding: 28px;
+        border-radius: 24px
+    }
+
+    .menu-product-line {
+        gap: 15px;
+        margin-bottom: 31px
+    }
+
+    .menu-product-line .product-icon {
+        width: 31px;
+        height: 31px
+    }
+
+    .menu-feature p {
+        font-size: clamp(31px, 4vw, 42px);
+        margin-bottom: 20px
+    }
+
+    .menu-feature>img {
+        max-height: 220px
+    }
+
+    .menu-email {
+        font-size: 18px;
+        margin-top: 22px
     }
 
     .goal-buttons>button {
@@ -5946,10 +6042,17 @@ header {
     }
 
     .menu-inner {
-        padding: 20px 6%
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 20px 6%;
+        min-height: 0;
+        height: auto
     }
 
     .menu-inner>a {
+        width: 100%;
         font-size: 24px;
         padding: 8px 10px;
         line-height: 1.16
@@ -5961,6 +6064,11 @@ header {
     }
 
     .menu-feature {
+        position: relative;
+        grid-column: auto;
+        grid-row: auto;
+        width: 100%;
+        min-height: 0;
         padding: 18px;
         margin-top: 18px
     }
