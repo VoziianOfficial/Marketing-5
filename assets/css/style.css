@@ -7799,7 +7799,6 @@ header {
 
 @media(max-width:700px) {
     #included,
-    #services,
     .creative.section,
     #pricing,
     .section.partnership,
@@ -7848,5 +7847,51 @@ header {
     #contact .contact-email {
         max-width: 100%;
         overflow-wrap: anywhere;
+    }
+
+    #services {
+        display: block;
+        width: min(92%, calc(100vw - 28px));
+        max-width: 520px;
+        margin-inline: auto;
+        overflow: clip;
+    }
+
+    #services .service-grid {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 18px;
+    }
+
+    #services .service-card {
+        width: 100%;
+        max-width: 430px;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+        padding: 28px 22px 20px;
+        gap: 18px;
+    }
+
+    #services .service-card div {
+        display: grid;
+        justify-items: center;
+        gap: 10px;
+    }
+
+    #services .service-card h3,
+    #services .service-card p {
+        margin-inline: auto;
+    }
+
+    #services .service-card p {
+        max-width: 32ch;
+    }
+
+    #services .service-card img {
+        width: min(100%, 300px);
+        max-height: 190px;
+        object-fit: contain;
+        transform: none;
     }
 }
