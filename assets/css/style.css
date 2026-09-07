@@ -7650,3 +7650,80 @@ header {
 .creative-gallery .creative-tile[aria-hidden=true] {
     pointer-events: none;
 }
+
+.designed-form {
+    background: #f7faff;
+    border: 1px solid #c9d7ec;
+    box-shadow: 0 24px 58px rgba(31, 63, 104, .14), 0 8px 20px rgba(31, 63, 104, .08), inset 0 1px 0 rgba(255, 255, 255, .9);
+}
+
+.designed-form input:not([type=checkbox]):not([type=radio]),
+.designed-form textarea {
+    border-color: #c6d3e6;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, .95), 0 8px 18px rgba(31, 63, 104, .05);
+}
+
+.designed-form input:not([type=checkbox]):not([type=radio]):focus,
+.designed-form textarea:focus {
+    border-color: #7fa8ec;
+    box-shadow: 0 0 0 3px rgba(23, 105, 239, .12), 0 10px 22px rgba(31, 63, 104, .08);
+}
+
+.service-choices label>span {
+    border-color: #c6d3e6;
+    box-shadow: 0 8px 18px rgba(31, 63, 104, .05);
+}
+
+@media(max-width:700px) {
+    #included,
+    #services,
+    .creative.section,
+    #pricing,
+    .section.partnership,
+    .section.story-section,
+    .section.pace-studio {
+        display: none;
+    }
+
+    #contact {
+        width: min(90%, calc(100vw - 28px));
+        max-width: calc(100vw - 28px);
+        overflow: clip;
+    }
+
+    #contact>.reveal,
+    #contact .designed-form {
+        min-width: 0;
+        width: 100%;
+    }
+
+    #contact>.reveal h2 {
+        white-space: normal;
+        overflow-wrap: anywhere;
+    }
+
+    #contact .contact-products {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        width: 100%;
+        max-width: 100%;
+        gap: 10px;
+    }
+
+    #contact .contact-products span {
+        display: none;
+    }
+
+    #contact .contact-products span,
+    #contact .contact-products a {
+        justify-content: center;
+        min-width: 0;
+        padding: 9px 10px;
+        text-align: center;
+        overflow-wrap: anywhere;
+    }
+
+    #contact .contact-email {
+        max-width: 100%;
+        overflow-wrap: anywhere;
+    }
+}
