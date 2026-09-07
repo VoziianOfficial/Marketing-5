@@ -1684,16 +1684,34 @@ h2 {
 }
 
 .menu-inner>a {
-    display: block;
-    width: 53%;
-    font-size: clamp(30px, 3.6vw, 56px);
-    padding: 9px 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    width: min(53%, 560px);
+    min-height: 58px;
+    padding: 10px 14px 10px 12px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-size: clamp(24px, 2.55vw, 38px);
     line-height: 1.2;
-    transition: transform .3s, color .2s
+    letter-spacing: 0;
+    background: transparent;
+    transition: transform .3s, color .2s, background .2s, border-color .2s, box-shadow .2s
 }
 
 .menu-inner>a:hover {
-    transform: translateX(8px)
+    color: #202124;
+    transform: translateX(6px);
+    background: #fff;
+    border-color: #dce8f8;
+    box-shadow: 0 10px 26px #1d437b0d
+}
+
+.menu-link-icon {
+    width: 28px;
+    height: 28px;
+    flex: 0 0 28px;
+    object-fit: contain
 }
 
 .menu-services {
@@ -1775,6 +1793,10 @@ h2 {
 
 .menu-open .menu-inner>a:nth-child(5) {
     animation-delay: .16s
+}
+
+.menu-open .menu-inner>a:nth-child(6) {
+    animation-delay: .2s
 }
 
 .ecosystem {
@@ -3105,8 +3127,9 @@ h2 {
 
     .menu-inner>a {
         width: 100%;
-        font-size: clamp(29px, 7vw, 39px);
-        padding: 9px 0
+        font-size: clamp(21px, 5.8vw, 31px);
+        min-height: 52px;
+        padding: 9px 12px
     }
 
     .menu-services {
@@ -3956,8 +3979,9 @@ header {
 }
 
 .menu-inner>a {
-    font-size: clamp(30px, 3.1vw, 48px);
-    padding: 7px 0
+    font-size: clamp(23px, 2.4vw, 34px);
+    min-height: 54px;
+    padding: 9px 13px 9px 11px
 }
 
 .menu-feature {
@@ -5750,7 +5774,7 @@ header {
     }
 
     .menu-inner>a {
-        font-size: 38px
+        font-size: 29px
     }
 
     .goal-buttons>button {
@@ -5917,8 +5941,8 @@ header {
     }
 
     .menu-inner>a {
-        font-size: 29px;
-        padding: 7px 0;
+        font-size: 24px;
+        padding: 8px 10px;
         line-height: 1.16
     }
 
