@@ -1,7 +1,7 @@
 window.SiteConfig = {
-  "companyName": "Forma",
-  "companyShortName": "forma",
-  "email": "hello@forma.example",
+  "companyName": "Glimio",
+  "companyShortName": "Glimio",
+  "email": "hello@glimio.example",
   "logo": "assets/logo.png",
   "favicon": "assets/favicon.png",
   "brandMark": "assets/logo.png",

@@ -158,7 +158,7 @@ function format_mailbox(string $email, string $name = ''): string
     return encode_header($name) . ' <' . $email . '>';
 }
 
-function smtp_send(array $smtp, string $recipient, string $subject, string $body, string $replyToEmail, string $replyToName): void
+function smtp_send(array $smtp, string $recipient, string $subject, string $body, string $replyToEmail, string $replyToName, string $companyName): void
 {
     $remote = ($smtp['encryption'] === 'ssl' ? 'ssl://' : '') . $smtp['host'] . ':' . $smtp['port'];
     $socket = @stream_socket_client($remote, $errno, $errstr, $smtp['timeout'], STREAM_CLIENT_CONNECT);
@@ -196,7 +196,7 @@ function smtp_send(array $smtp, string $recipient, string $subject, string $body
             'MIME-Version: 1.0',
             'Content-Type: text/plain; charset=UTF-8',
             'Content-Transfer-Encoding: 8bit',
-            'X-Mailer: Forma contact form',
+            'X-Mailer: ' . preg_replace('/[\r\n\x00]/', '', $companyName) . ' contact form',
         ];
 
         $message = implode("\r\n", $headers) . "\r\n\r\n" . str_replace("\n", "\r\n", $body);
@@ -256,6 +256,7 @@ if ($privacyConsent !== '1') {
 
 $siteConfig = load_site_config();
 $recipient = trim((string)($siteConfig['email'] ?? ''));
+$companyName = trim((string)($siteConfig['companyName'] ?? 'Website'));
 
 if (
     $recipient === ''
@@ -278,7 +279,7 @@ $body = implode("\n", [
 ]);
 
 try {
-    smtp_send($smtp, $recipient, $subject, $body, $email, $name);
+    smtp_send($smtp, $recipient, $subject, $body, $email, $name, $companyName !== '' ? $companyName : 'Website');
 } catch (Throwable $error) {
     error_log('[contact.php] ' . $error->getMessage());
     public_error(502, 'Unable to send your message right now. Please try again later.');
